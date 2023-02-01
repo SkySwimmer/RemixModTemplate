@@ -26,7 +26,7 @@ You will need to use debug logging to debug patchers.
 Building:
 To build this mod you will need to have .NET installed. The dotnet CLI can be used to build the package.
 Buildin can be done cross-platform, `dotnet build` will copy the mod to the built-in Remix as well as `build/remix`.
-The final mod is saved in `build/remix`, ready to be installed in non-dev builds of Rain World.
+The final mod is saved in `build/remix`, ready to be installed outside of the project.
 
 
 
@@ -65,8 +65,9 @@ If a console with a lot of errors pops up and a blackscreen occurs, the BepInEx 
 Assets and other content:
 Note that this is untested but deducted from the built-in mods.
 
-From what i can see, Rain World loads assets from mods first and then from its streaming assets. As long as you follow the structure seen in RainWorld_Data/StreamingAssets,
-you can override and/or add assets by adding the files and folders to your project's mod folder.
+According to what i heard in the Discord server, Rain World loads mergedmods first followed by mod assets, after that it loads from streamingassets.
+As long as you follow the structure seen in RainWorld_Data/StreamingAssets, you can override and/or add assets by adding the files and folders to your project's mod folder.
+For more info you can refer to https://rainworldmodding.miraheze.org/wiki/Downpour_Reference/Mod_Directories
 
 The 'mod/' folder is copied to the final mod package and Remix will load the assets from that package should you have any.
 

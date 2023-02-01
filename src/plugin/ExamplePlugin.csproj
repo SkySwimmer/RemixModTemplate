@@ -56,7 +56,7 @@
     <Exec Command="cp -rf ../../mod/. ../../game/RainWorld_Data/StreamingAssets/mods/$(SolutionName)" Condition="'$(OS)' == 'Unix'" />
     <Exec Command="xcopy /s /i ..\..\game\RainWorld_Data\StreamingAssets\mods\$(SolutionName) ..\..\build\remix\$(SolutionName) /Y" Condition="'$(OS)' != 'Unix'" />
     <Exec Command="mkdir -p build/remix" Condition="'$(OS)' == 'Unix'" />
-    <Exec Command="cp -rf ../../game/RainWorld_Data/StreamingAssets/mods/$(SolutionName)/. ../../build/remix/$(SolutionName)" Condition="'$(OS)' == 'Unix'" />
+    <Exec Command="cp -rf ../../game/RainWorld_Data/StreamingAssets/mods/$(SolutionName)/. ../../build/remix" Condition="'$(OS)' == 'Unix'" />
   </Target>
   
   <ProjectExtensions>
